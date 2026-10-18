@@ -14,11 +14,11 @@ export default function MarketingPanel({ request, inquiries = [], onNotice }) {
   const [group, setGroup] = useState({ name: '', description: '', contact_ids: [] });
   const [editingGroupId, setEditingGroupId] = useState('');
   const [groupSearch, setGroupSearch] = useState('');
-  const [campaign, setCampaign] = useState({ group_id: '', subject: '', body: '' });
+  const [campaign, setCampaign] = useState({ group_id: '', subject: '', body: '', html: '' });
   const [activeTab, setActiveTab] = useState('Contacts & groups');
   const [selectedInquiry, setSelectedInquiry] = useState(null);
   const [thread, setThread] = useState([]);
-  const [reply, setReply] = useState({ subject: '', body: '' });
+  const [reply, setReply] = useState({ subject: '', body: '', html: '' });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
 
@@ -82,12 +82,12 @@ export default function MarketingPanel({ request, inquiries = [], onNotice }) {
     try {
       const result = await request('/api/admin/marketing/campaigns/send', { method: 'POST', body: JSON.stringify(campaign) });
       onNotice(`Campaign sent: ${result.sent_count} delivered, ${result.failed_count} failed.`);
-      setCampaign((current) => ({ ...current, subject: '', body: '' })); await load();
+      setCampaign((current) => ({ ...current, subject: '', body: '', html: '' })); await load();
     } catch (err) { setError(err.message); } finally { setBusy(false); }
   }
 
   async function openInquiry(item) {
-    setSelectedInquiry(item); setReply({ subject: `Re: ${item.project_type} inquiry | NeroTech`, body: '' }); setError('');
+    setSelectedInquiry(item); setReply({ subject: `Re: ${item.project_type} inquiry | NeroTech`, body: '', html: '' }); setError('');
     try { setThread(await request(`/api/admin/inquiries/${item.id}/messages`)); }
     catch (err) { setError(err.message); }
   }
@@ -97,7 +97,7 @@ export default function MarketingPanel({ request, inquiries = [], onNotice }) {
     setBusy(true); setError('');
     try {
       await request(`/api/admin/inquiries/${selectedInquiry.id}/reply`, { method: 'POST', body: JSON.stringify(reply) });
-      setThread(await request(`/api/admin/inquiries/${selectedInquiry.id}/messages`)); setReply((current) => ({ ...current, body: '' }));
+      setThread(await request(`/api/admin/inquiries/${selectedInquiry.id}/messages`)); setReply((current) => ({ ...current, body: '', html: '' }));
       onNotice(`Reply sent to ${selectedInquiry.email}.`);
     } catch (err) { setError(err.message); } finally { setBusy(false); }
   }
@@ -136,7 +136,9 @@ export default function MarketingPanel({ request, inquiries = [], onNotice }) {
       <form className="card marketing-form" onSubmit={sendCampaign}><div className="card-header"><h2>Compose campaign</h2></div>
         <label>Recipient group<select required value={campaign.group_id} onChange={(e) => setCampaign({ ...campaign, group_id: e.target.value })}><option value="">Select a group</option>{groups.map((item) => <option key={item.id} value={item.id}>{item.name} · {item.eligible_count} opted in</option>)}</select></label>
         <label>Subject<input required maxLength={200} value={campaign.subject} onChange={(e) => setCampaign({ ...campaign, subject: e.target.value })} /></label>
-        <label>Email message<textarea required maxLength={20000} rows={9} value={campaign.body} onChange={(e) => setCampaign({ ...campaign, body: e.target.value })} /></label>
+        <label>Plain text email<textarea required maxLength={20000} rows={7} value={campaign.body} onChange={(e) => setCampaign({ ...campaign, body: e.target.value })} /></label>
+        <label>HTML email (optional)<textarea maxLength={50000} rows={10} value={campaign.html} onChange={(e) => setCampaign({ ...campaign, html: e.target.value })} placeholder="<h1>Hello</h1><p>Your email content…</p>" /></label>
+        <p className="marketing-privacy-note">Recipients receive both versions. Email clients use the HTML version when supported and the plain text version as a fallback.</p>
         <p className="marketing-privacy-note">Each opted-in recipient receives a separate email. Recipients will not see one another’s addresses. Contacts without recorded consent are excluded.</p>
         <button className="primary" disabled={busy || !groups.some((item) => item.id === campaign.group_id && item.eligible_count)}><EnvelopeIcon />{busy ? 'Sending…' : 'Send campaign'}</button>
       </form>
@@ -145,6 +147,6 @@ export default function MarketingPanel({ request, inquiries = [], onNotice }) {
 
     {activeTab === 'Inquiry replies' && <section className="card marketing-list-card"><div className="card-header"><h2>Inquiry inbox</h2><span className="record-count">{inquiries.length}</span></div>{inquiries.length ? <div className="marketing-contact-list">{inquiries.map((item) => <div key={item.id}><span className="marketing-avatar">{item.name.slice(0, 1).toUpperCase()}</span><span className="marketing-contact-name"><strong>{item.name} <small>· {item.project_type}</small></strong><small>{item.email} · {new Date(item.created_at).toLocaleString()}</small></span><span className={`status ${item.status}`}>{item.status}</span><button className="row-action" onClick={() => openInquiry(item)}>Open thread & reply</button></div>)}</div> : <p className="empty">No inquiries to reply to.</p>}</section>}
 
-    {selectedInquiry && <div className="modal-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) setSelectedInquiry(null); }}><section className="edit-modal inquiry-thread-modal"><div className="card-header"><div><h2>Reply to {selectedInquiry.name}</h2><small>{selectedInquiry.email}</small></div><button className="close-modal" aria-label="Close reply window" onClick={() => setSelectedInquiry(null)}>×</button></div><div className="inquiry-original"><strong>Original inquiry · {selectedInquiry.project_type}</strong><p>{selectedInquiry.message}</p></div><div className="inquiry-thread">{thread.map((message) => <article key={message.id} className="thread-message"><div><strong>{message.direction === 'outbound' ? 'NeroTech reply' : 'Message'}</strong><span className={`status ${message.delivery_status === 'sent' ? 'contacted' : 'closed'}`}>{message.delivery_status}</span></div><small>{message.subject} · {new Date(message.created_at).toLocaleString()}</small><p>{message.body}</p>{message.error && <small className="thread-error">{message.error}</small>}</article>)}{!thread.length && <p className="empty">No replies have been sent yet.</p>}</div><form className="inquiry-reply-form" onSubmit={sendReply}><label>Subject<input required value={reply.subject} onChange={(e) => setReply({ ...reply, subject: e.target.value })} /></label><label>Reply<textarea required rows={5} value={reply.body} onChange={(e) => setReply({ ...reply, body: e.target.value })} /></label><button className="primary" disabled={busy}>{busy ? 'Sending…' : 'Send and track reply'}</button></form></section></div>}
+    {selectedInquiry && <div className="modal-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) setSelectedInquiry(null); }}><section className="edit-modal inquiry-thread-modal"><div className="card-header"><div><h2>Reply to {selectedInquiry.name}</h2><small>{selectedInquiry.email}</small></div><button className="close-modal" aria-label="Close reply window" onClick={() => setSelectedInquiry(null)}>×</button></div><div className="inquiry-original"><strong>Original inquiry · {selectedInquiry.project_type}</strong><p>{selectedInquiry.message}</p></div><div className="inquiry-thread">{thread.map((message) => <article key={message.id} className="thread-message"><div><strong>{message.direction === 'outbound' ? 'NeroTech reply' : 'Message'}</strong><span className={`status ${message.delivery_status === 'sent' ? 'contacted' : 'closed'}`}>{message.delivery_status}</span></div><small>{message.subject} · {new Date(message.created_at).toLocaleString()}</small><p>{message.body}</p>{message.error && <small className="thread-error">{message.error}</small>}</article>)}{!thread.length && <p className="empty">No replies have been sent yet.</p>}</div><form className="inquiry-reply-form" onSubmit={sendReply}><label>Subject<input required value={reply.subject} onChange={(e) => setReply({ ...reply, subject: e.target.value })} /></label><label>Plain text reply<textarea required rows={5} value={reply.body} onChange={(e) => setReply({ ...reply, body: e.target.value })} /></label><label>HTML reply (optional)<textarea maxLength={50000} rows={8} value={reply.html} onChange={(e) => setReply({ ...reply, html: e.target.value })} placeholder="<p>Your formatted reply…</p>" /></label><button className="primary" disabled={busy}>{busy ? 'Sending…' : 'Send and track reply'}</button></form></section></div>}
   </section>;
 }
