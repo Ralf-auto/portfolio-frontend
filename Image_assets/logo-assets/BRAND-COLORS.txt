@@ -1,0 +1,8 @@
+NeroTech Brand Palette
+Primary purple: #6C5CE7
+Dark navy: #191B2B
+White: #FFFFFF
+Soft lavender: #F4F1FF
+
+SVG wordmarks use editable text (DejaVu Sans bold with Arial fallback).
+SVG and PNG backgrounds are transparent.

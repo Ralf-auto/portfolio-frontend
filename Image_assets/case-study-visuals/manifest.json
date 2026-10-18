@@ -1,0 +1,254 @@
+[
+  {
+    "project": "PulseMetrics",
+    "type": "cover",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-cover.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-cover.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "overview",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-overview.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-overview.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "process-01",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-process-01.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-process-01.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "process-02",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-process-02.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-process-02.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "final-01",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-final-01.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-final-01.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "final-02",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-final-02.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-final-02.webp"
+  },
+  {
+    "project": "PulseMetrics",
+    "type": "results",
+    "svg": "project-01-pulsemetrics/project-01-pulsemetrics-results.svg",
+    "webp": "project-01-pulsemetrics/project-01-pulsemetrics-results.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "cover",
+    "svg": "project-02-forma-store/project-02-forma-store-cover.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-cover.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "overview",
+    "svg": "project-02-forma-store/project-02-forma-store-overview.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-overview.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "process-01",
+    "svg": "project-02-forma-store/project-02-forma-store-process-01.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-process-01.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "process-02",
+    "svg": "project-02-forma-store/project-02-forma-store-process-02.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-process-02.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "final-01",
+    "svg": "project-02-forma-store/project-02-forma-store-final-01.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-final-01.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "final-02",
+    "svg": "project-02-forma-store/project-02-forma-store-final-02.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-final-02.webp"
+  },
+  {
+    "project": "Forma Store",
+    "type": "results",
+    "svg": "project-02-forma-store/project-02-forma-store-results.svg",
+    "webp": "project-02-forma-store/project-02-forma-store-results.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "cover",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-cover.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-cover.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "overview",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-overview.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-overview.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "process-01",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-process-01.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-process-01.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "process-02",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-process-02.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-process-02.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "final-01",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-final-01.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-final-01.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "final-02",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-final-02.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-final-02.webp"
+  },
+  {
+    "project": "Cognia AI",
+    "type": "results",
+    "svg": "project-03-cognia-ai/project-03-cognia-ai-results.svg",
+    "webp": "project-03-cognia-ai/project-03-cognia-ai-results.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "cover",
+    "svg": "project-04-authcore/project-04-authcore-cover.svg",
+    "webp": "project-04-authcore/project-04-authcore-cover.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "overview",
+    "svg": "project-04-authcore/project-04-authcore-overview.svg",
+    "webp": "project-04-authcore/project-04-authcore-overview.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "process-01",
+    "svg": "project-04-authcore/project-04-authcore-process-01.svg",
+    "webp": "project-04-authcore/project-04-authcore-process-01.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "process-02",
+    "svg": "project-04-authcore/project-04-authcore-process-02.svg",
+    "webp": "project-04-authcore/project-04-authcore-process-02.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "final-01",
+    "svg": "project-04-authcore/project-04-authcore-final-01.svg",
+    "webp": "project-04-authcore/project-04-authcore-final-01.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "final-02",
+    "svg": "project-04-authcore/project-04-authcore-final-02.svg",
+    "webp": "project-04-authcore/project-04-authcore-final-02.webp"
+  },
+  {
+    "project": "AuthCore",
+    "type": "results",
+    "svg": "project-04-authcore/project-04-authcore-results.svg",
+    "webp": "project-04-authcore/project-04-authcore-results.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "cover",
+    "svg": "project-05-docflow/project-05-docflow-cover.svg",
+    "webp": "project-05-docflow/project-05-docflow-cover.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "overview",
+    "svg": "project-05-docflow/project-05-docflow-overview.svg",
+    "webp": "project-05-docflow/project-05-docflow-overview.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "process-01",
+    "svg": "project-05-docflow/project-05-docflow-process-01.svg",
+    "webp": "project-05-docflow/project-05-docflow-process-01.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "process-02",
+    "svg": "project-05-docflow/project-05-docflow-process-02.svg",
+    "webp": "project-05-docflow/project-05-docflow-process-02.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "final-01",
+    "svg": "project-05-docflow/project-05-docflow-final-01.svg",
+    "webp": "project-05-docflow/project-05-docflow-final-01.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "final-02",
+    "svg": "project-05-docflow/project-05-docflow-final-02.svg",
+    "webp": "project-05-docflow/project-05-docflow-final-02.webp"
+  },
+  {
+    "project": "DocFlow",
+    "type": "results",
+    "svg": "project-05-docflow/project-05-docflow-results.svg",
+    "webp": "project-05-docflow/project-05-docflow-results.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "cover",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-cover.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-cover.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "overview",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-overview.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-overview.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "process-01",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-process-01.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-process-01.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "process-02",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-process-02.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-process-02.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "final-01",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-final-01.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-final-01.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "final-02",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-final-02.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-final-02.webp"
+  },
+  {
+    "project": "Atelier Studio",
+    "type": "results",
+    "svg": "project-06-atelier-studio/project-06-atelier-studio-results.svg",
+    "webp": "project-06-atelier-studio/project-06-atelier-studio-results.webp"
+  }
+]

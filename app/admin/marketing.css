@@ -1,0 +1,64 @@
+.admin-app.marketing-active .content>.admin-table-card{display:none}
+.admin-session-loading{display:flex;align-items:center;justify-content:center;gap:11px;min-height:180px;color:#77798d;font-size:12px}
+.marketing-workspace{display:grid;gap:18px;margin-top:18px}
+.marketing-tabs{display:flex;gap:7px;padding:5px;background:#f0eff7;border-radius:12px;width:max-content;max-width:100%;overflow:auto}
+.marketing-tabs button{display:flex;align-items:center;gap:8px;border:0;border-radius:9px;padding:10px 13px;background:transparent;color:#74768a;font-size:11px;font-weight:700;white-space:nowrap}
+.marketing-tabs button svg{width:16px;height:16px}
+.marketing-tabs button.active{background:#fff;color:#5143d8;box-shadow:0 2px 8px #27204a12}
+.marketing-summary{display:flex;gap:10px;flex-wrap:wrap}
+.marketing-summary span{display:flex;align-items:center;gap:8px;padding:10px 13px;background:#fff;border:1px solid var(--border);border-radius:10px;color:#5e6073;font-size:11px;font-weight:700}
+.marketing-summary svg{width:17px;height:17px;color:var(--purple)}
+.marketing-columns{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(320px,1.15fr);gap:16px;align-items:start}
+.marketing-form{display:grid;gap:13px;padding:0 20px 20px}
+.marketing-form .card-header{margin:0 -20px;padding:19px 20px 13px}
+.marketing-form label,.inquiry-reply-form label{display:grid;gap:7px;color:#656779;font-size:11px;font-weight:700}
+.marketing-form input:not([type=checkbox]),.marketing-form select,.marketing-form textarea,.inquiry-reply-form input,.inquiry-reply-form textarea{width:100%;min-width:0;border:1px solid var(--border);border-radius:8px;padding:10px 11px;color:var(--text);background:#fff;outline-color:var(--purple);font:inherit;font-weight:400}
+.marketing-form textarea,.inquiry-reply-form textarea{resize:vertical;line-height:1.55}
+.marketing-form .marketing-field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.marketing-form .marketing-consent{display:flex;align-items:flex-start;gap:9px;line-height:1.5;font-weight:500}
+.marketing-group-form-actions{display:flex;justify-content:flex-end;gap:9px}
+.marketing-form input[type=checkbox],.marketing-contact-picker input{accent-color:var(--purple)}
+.marketing-form .primary,.inquiry-reply-form .primary{display:flex;align-items:center;justify-content:center;gap:8px;border:0}
+.marketing-form .primary svg,.inquiry-reply-form .primary svg{width:16px;height:16px}
+.marketing-contact-picker{max-height:250px;overflow:auto;border:1px solid var(--border);border-radius:9px;padding:8px 11px}
+.marketing-contact-picker legend{padding:0 4px;color:#77798d;font-size:10px;font-weight:700}
+.marketing-contact-picker .marketing-member-search{position:sticky;top:0;z-index:1;display:flex;align-items:center;gap:8px;margin:0 -3px 7px;padding:7px 8px;border:1px solid var(--border);border-radius:8px;background:#fff}
+.marketing-member-search svg{width:15px;height:15px;flex:none;color:#9698a6}
+.marketing-member-search input{width:100%;min-width:0;border:0!important;padding:3px!important;outline:none!important;font-size:10px!important}
+.marketing-contact-picker>label{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid #f3f2f8;font-weight:600}
+.marketing-contact-picker>label:last-of-type{border-bottom:0}
+.marketing-contact-picker>label span,.marketing-contact-picker small{display:block}
+.marketing-contact-picker small{margin-top:3px;color:#9698a6;font-size:9px;font-weight:400}
+.marketing-contact-picker p,.marketing-privacy-note{margin:5px 0;color:#85889a;font-size:10px;line-height:1.6}
+.marketing-lists{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:start}
+.marketing-list-card{min-width:0;overflow:hidden}
+.marketing-contact-list,.marketing-group-list{padding:0 18px 10px}
+.marketing-contact-list>div,.marketing-group-list>div{display:flex;align-items:center;gap:11px;min-height:62px;padding:10px 0;border-top:1px solid #f1eff6}
+.marketing-contact-name{flex:1;min-width:0}
+.marketing-contact-name strong,.marketing-contact-name small,.marketing-group-list>div>span:nth-child(2) strong,.marketing-group-list>div>span:nth-child(2) small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.marketing-contact-name strong,.marketing-group-list>div>span:nth-child(2) strong{font-size:11px;color:#292a3d}
+.marketing-contact-name small,.marketing-group-list>div>span:nth-child(2) small{margin-top:5px;color:#9294a6;font-size:9px}
+.marketing-avatar{display:grid;place-items:center;flex:none;width:33px;height:33px;border-radius:50%;background:#eee5ff;color:#6453dd;font-size:11px;font-weight:800}
+.marketing-group-list>div>svg{width:18px;height:18px;flex:none;color:var(--purple)}
+.marketing-group-list>div>span:nth-child(2){flex:1;min-width:0}
+.campaign-columns{grid-template-columns:minmax(300px,.9fr) minmax(320px,1.1fr)}
+.campaign-history{min-height:180px}
+.campaign-counts{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap;color:#388e68;font-size:10px}
+.campaign-counts small{color:#bd5960;font-size:9px}
+.inquiry-thread-modal{width:min(700px,100%);max-height:92vh;display:flex;flex-direction:column}
+.inquiry-thread-modal>.card-header{border-bottom:1px solid var(--border)}
+.inquiry-thread-modal>.card-header h2{font-size:16px}
+.inquiry-thread-modal>.card-header small{display:block;margin-top:5px;color:#85889a;font-size:10px}
+.inquiry-original{margin:16px 20px 0;padding:14px;border-radius:10px;background:#f8f7fd;color:#585a6e;font-size:11px;line-height:1.6}
+.inquiry-original p{margin:8px 0 0;white-space:pre-wrap}
+.inquiry-thread{max-height:230px;overflow:auto;padding:12px 20px}
+.thread-message{padding:12px 0;border-bottom:1px solid var(--border)}
+.thread-message>div{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.thread-message strong{font-size:11px}
+.thread-message>small{display:block;margin-top:6px;color:#9395a3;font-size:9px}
+.thread-message p{margin:8px 0 0;color:#55576b;font-size:11px;line-height:1.6;white-space:pre-wrap}
+.thread-message .thread-error{color:#bd4652}
+.inquiry-reply-form{display:grid;gap:12px;padding:14px 20px 20px;border-top:1px solid var(--border)}
+.inquiry-reply-form .primary{justify-self:end}
+@media(max-width:950px){.marketing-lists{grid-template-columns:1fr}.campaign-columns{grid-template-columns:1fr}}
+@media(max-width:700px){.marketing-columns{grid-template-columns:1fr}.marketing-tabs{width:100%}.marketing-tabs button{padding:9px 10px;font-size:10px}.marketing-summary span{font-size:10px}.marketing-contact-list>div{gap:7px;flex-wrap:wrap}.marketing-contact-name{min-width:60%}.inquiry-thread-modal{max-height:95vh}}

@@ -1,0 +1,57 @@
+/* Clean product-design typography: one consistent family with a crisp display face. */
+.brand-logo {
+  display: block;
+  width: 166px;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+footer .brand-logo {
+  filter: none;
+}
+
+*,
+*::before,
+*::after {
+  font-family: 'Manrope', Arial, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+.eyebrow,
+.nature-title,
+.quote-mark,
+.testimonial-section blockquote,
+.stat strong {
+  font-family: 'Space Grotesk', Arial, sans-serif !important;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  letter-spacing: -2.8px;
+  font-weight: 700;
+}
+
+.hero h2 {
+  letter-spacing: -0.3px;
+}
+
+.section-heading h2,
+.services h2,
+.about-copy h2,
+.contact-cta h2 {
+  letter-spacing: -1.2px;
+  font-weight: 700;
+}
+
+.project-info h3,
+.service-grid h3,
+.process-grid h3 {
+  letter-spacing: -0.3px;
+}
+
+.testimonial-section blockquote {
+  letter-spacing: -0.6px;
+}
